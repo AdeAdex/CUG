@@ -14,7 +14,7 @@ const LoginPage = () => {
           <div className="w-[70px] h-[72px] flex flex-col items-center mx-auto font-inter font-[700] text-[16px]">
             {/* Logo */}
             <img
-              src="/public/images/bluelogo.png"
+              src="images/bluelogo.png"
               alt="bluelogo"
               className="w-full"
             />

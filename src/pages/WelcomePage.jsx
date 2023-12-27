@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const WelcomePage = () => {
-  const backgroundImageUrl = 'url("/public/images/Frame 1686551101.png")';
+  const backgroundImageUrl = 'url("images/Frame 1686551101.png")';
   return (
     <div
       className="px-[32px] pt-[480px]"
@@ -18,7 +18,7 @@ const WelcomePage = () => {
       <div className="w-[100%]  flex flex-col  gap-[26px] bg-white lg:bg-transparent">
         <div className="w-[70px] h-[72px] flex flex-col items-center  mx-auto font-inter font-[700] text-[16px] ">
           <img
-            src="/public/images/bluelogo.png"
+            src="images/bluelogo.png"
             alt="bluelogo"
             className="w-full"
           />
