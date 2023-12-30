@@ -8,24 +8,32 @@ import Button1 from "../shared/Button1";
 
 const RegistrationForm1 = () => {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const signup = async (userData) => {
     try {
-      setLoading(true)
-      const response = await axios.post(
-        "http://assessmentapi-001-site1.htempurl.com/api/v1/User/Register1",
-        userData
-      );
+      setLoading(true);
+      let endpoint =
+        "http://assessmentapi-001-site1.htempurl.com/api/v1/User/Register1";
+      const response = await axios.post(endpoint, userData, {
+        withCredentials: true,
+        timeout: 5000,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      setLoading(false);
       if (response) {
-      setLoading(false)
-      navigate("/register/2", { state: { formData: values } });
-      console.log("Signup successful:", response.data);
+        navigate("/register/2", { state: { formData: formik.values } });
+        console.log("Signup successful:", response.data);
       }
     } catch (error) {
+      setLoading(false);
       console.error("Signup error:", error.message);
+      console.log("Error details:", error);
     }
   };
+
   // Formik and Yup setup
   const formik = useFormik({
     initialValues: {
@@ -127,11 +135,15 @@ const RegistrationForm1 = () => {
           </label>
         </div>
         {/* Forgot password and sign-up section */}
-        <AccountLinks text1="Forgot Password?" text2="Have an Account?" link1="/forgotpassword/verify_account"
-          link2="/login"/>
+        <AccountLinks
+          text1="Forgot Password?"
+          text2="Have an Account?"
+          link1="/forgotpassword/verify_account"
+          link2="/login"
+        />
         {/* Signup button */}
         <div className="mx-auto w-[100%] mt-[23.67px]">
-          <Button1 title="Next" loading={loading}/>
+          <Button1 title="Next" loading={loading} />
         </div>
       </form>
     </>
