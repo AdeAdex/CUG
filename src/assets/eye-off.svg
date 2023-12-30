@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  width="24"
+  height="24"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M15.879 8.12A9.943 9.943 0 0119 12a9.943 9.943 0 01-3.121 7.88m-1.758-2.913A6 6 0 0012 17a6 6 0 00-2.12-4.593m-.835-2.829a9.966 9.966 0 011.87-2.398M7.88 8.122A9.965 9.965 0 0112 7a9.965 9.965 0 014.122.88m1.758 2.914A6 6 0 0012 7a6 6 0 002.12 4.593m.835 2.829a9.966 9.966 0 01-1.87 2.398M4 4l16 16"
+  ></path>
+</svg>

@@ -47,10 +47,10 @@ const Navbar = () => {
               <FaHome className="inline-block" /> Home
             </Link>
             <Link to="/profile" className="block py-2 hover:text-gray-300">
-              <FaUser className="inline-block" /> Profile
+              <FaUser className="inline-block" /> Login
             </Link>
             <Link to="/settings" className="block py-2 hover:text-gray-300">
-              <FaCog className="inline-block" /> Settings
+              <FaCog className="inline-block" /> Register
             </Link>
           </div>
         )}
