@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import eye from "../../assets/eye.svg";
 import eyeOff from "../../assets/eye-off.svg";
+import Button1 from "../shared/Button1";
 
 const ChangePasswordForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -97,12 +98,9 @@ const ChangePasswordForm = () => {
       </div>
 
       {/* Done button */}
-      <button
-        type="submit"
-        className="bg-[#0F515F] py-[18.737px] px-[145.954px] text-[15.779px] font-[700] font-inter mx-auto text-center rounded-[10px] text-white w-[358.968px] mt-[49px]"
-      >
-        Done
-      </button>
+      <div className="mt-[49px]">
+        <Button1 title="Done" />
+      </div>
     </form>
   );
 };

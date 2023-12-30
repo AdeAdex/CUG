@@ -5,6 +5,8 @@ import * as Yup from "yup";
 import axios from "axios";
 import eye from "../../assets/eye.svg";
 import eyeOff from "../../assets/eye-off.svg";
+import AccountLinks from "../shared/AccountLinks";
+import Button1 from "../shared/Button1";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -88,21 +90,16 @@ const LoginForm = () => {
           )}
         </div>
         {/* Forgot password and sign-up section */}
-        <div className="w-[359px] justify-between flex mx-auto mt-[23.67px] text-[13.806px] font-inter font-[600] text-[#404040]">
-          <Link to="/forgotpassword/verify_account">
-            <span>Forgot Password?</span>
-          </Link>
-          <Link to="/register">
-            <span>Don't have an Account?</span>
-          </Link>
-        </div>
+        <AccountLinks
+          text1="Forgot Password?"
+          text2="Don’t have an Account?"
+          link1="/forgotpassword/verify_account"
+          link2="/register"
+        />
         {/* Login button */}
-        <button
-          type="submit"
-          className="bg-[#0F515F] py-[18.737px] px-[145.954px] text-[15.779px] font-[700] font-inter mx-auto text-center rounded-[10px] text-white w-[358.968px] mt-[23.67px]"
-        >
-          Login
-        </button>
+        <div className="mx-auto w-[100%] mt-[23.67px]">
+          <Button1 title="Login" />
+        </div>
       </form>
     </>
   );

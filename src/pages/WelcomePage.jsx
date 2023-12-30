@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HomeIndicator from "../components/shared/HomeIndicator";
+import Button1 from "../components/shared/Button1";
+import Button2 from "../components/shared/Button2";
 
 const WelcomePage = () => {
   const backgroundImageUrl = 'url("images/Frame 1686551101.png")';
@@ -28,16 +30,12 @@ const WelcomePage = () => {
           <div className="flex flex-col gap-[26px] md:max-w-[364px]  md:mx-auto">
             {/* Login button */}
             <Link to="/login">
-              <button className="bg-[#0F515F] py-[19px] px-[147px] text-center rounded-[10px] text-white w-[100%]">
-                Login
-              </button>
+              <Button1 title="Login"/>
             </Link>
 
             {/* Register button */}
             <Link to="/register">
-              <button className="bg-white py-[19px] px-[147px] text-center rounded-[10px] text-[#0F515F] border border-1 border-solid border-[#0F515F] w-[100%]">
-                Register
-              </button>
+              <Button2 title="Register"/>
             </Link>
           </div>
         </div>

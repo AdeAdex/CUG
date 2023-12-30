@@ -8,9 +8,9 @@ const LoginPage = () => {
   return (
     <>
       {/* Main container */}
-      <div className="pt-[105px] lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col">
+      <div className="lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col">
         {/* Logo and title section */}
-        <div className="flex flex-col max-w-[359px] mx-auto">
+        <div className="flex flex-col max-w-[359px] mx-auto mt-auto">
           <LogoAndTitle title="welcome back" />
           {/* Input fields */}
           <LoginForm />

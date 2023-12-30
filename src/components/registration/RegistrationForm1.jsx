@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import AccountLinks from "../shared/AccountLinks";
+import Button1 from "../shared/Button1";
 
 const RegistrationForm1 = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false)
 
+  const signup = async (userData) => {
+    try {
+      setLoading(true)
+      const response = await axios.post(
+        "http://assessmentapi-001-site1.htempurl.com/api/v1/User/Register1",
+        userData
+      );
+      if (response) {
+      setLoading(false)
+      navigate("/register/2", { state: { formData: values } });
+      console.log("Signup successful:", response.data);
+      }
+    } catch (error) {
+      console.error("Signup error:", error.message);
+    }
+  };
   // Formik and Yup setup
   const formik = useFormik({
     initialValues: {
@@ -24,7 +43,7 @@ const RegistrationForm1 = () => {
         .required("Email is required"),
     }),
     onSubmit: async (values) => {
-      navigate("/register/2", { state: { formData: values } });
+      await signup(values);
     },
   });
   return (
@@ -108,22 +127,11 @@ const RegistrationForm1 = () => {
           </label>
         </div>
         {/* Forgot password and sign-up section */}
-        <div className="w-[359px] justify-between flex mx-auto mt-[23.67px] text-[13.806px] font-inter font-[600] text-[#404040]">
-          <Link to="/forgotpassword/verify_account">
-            <span>Forgot Password?</span>
-          </Link>
-          <Link to="/login">
-            <span>Have an Account?</span>
-          </Link>
-        </div>
+        <AccountLinks text1="Forgot Password?" text2="Have an Account?" link1="/forgotpassword/verify_account"
+          link2="/login"/>
         {/* Signup button */}
         <div className="mx-auto w-[100%] mt-[23.67px]">
-          <button
-            type="submit"
-            className="bg-[#0F515F] py-[18.737px] px-[145.954px] text-[15.779px] font-[700] font-inter mx-auto text-center rounded-[10px] text-white w-full"
-          >
-            Next
-          </button>
+          <Button1 title="Next" loading={loading}/>
         </div>
       </form>
     </>

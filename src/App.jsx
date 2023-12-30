@@ -24,13 +24,11 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register/*">
             <Route index element={<Navigate to="1" />} />
-            <Route index element={<RegisterPage />} />
             <Route path="1" element={<Registration1 />} />
             <Route path="2" element={<Registration2 />} />
           </Route>
           <Route path="/forgotpassword/*">
             <Route index element={<Navigate to="verify_account" />} />
-            {/* <Route index element={<RegisterPage />} /> */}
             <Route path="verify_account" element={<Verify />} />
             <Route path="change_password" element={<ChangePassword />} />
             <Route path="reset_password" element={<ResetPassword />} />

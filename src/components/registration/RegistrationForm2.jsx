@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import AccountLinks from "../shared/AccountLinks";
+import Button1 from "../shared/Button1";
 
 // axios.defaults.headers.common["Content-Type"] = "application/json";
 
@@ -95,22 +97,11 @@ const RegistrationForm2 = () => {
           )}
         </div>
         {/* Forgot password and sign-up section */}
-        <div className="w-[100%] justify-between flex mx-auto mt-[23.67px] text-[13.806px] font-inter font-[600] text-[#404040]">
-          <Link to="/forgotpassword/verify_account">
-            <span>Forgot Password?</span>
-          </Link>
-          <Link to="/login">
-            <span>Have an Account?</span>
-          </Link>
-        </div>
+        <AccountLinks text1="Forgot Password?" text2="Have an Account?"  link1="/forgotpassword/verify_account"
+          link2="/login"/>
         {/* Done button */}
         <div className="mx-auto w-[100%] mt-[23.67px]">
-          <button
-            type="submit"
-            className="bg-[#0F515F] py-[18.737px] px-[145.954px] text-[15.779px] font-[700] font-inter mx-auto text-center rounded-[10px] text-white w-full"
-          >
-            Done
-          </button>
+          <Button1 title="Done"/>
         </div>
       </form>
     </>
