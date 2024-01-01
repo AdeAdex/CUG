@@ -8,9 +8,9 @@ const Registration1 = () => {
   return (
     <>
       {/* Main container */}
-      <div className="pt-[23.67px] lg:pt-[63px] lg:px-[34.52px] gap-[23.67px] flex flex-col">
+      <div className="pt-[23.67px] lg:pt-[63px] lg:px-[34.52px] gap-[23.67px] flex flex-col w-full">
         {/* Logo and title section */}
-        <div className="flex flex-col max-w-[359px] mx-auto">
+        <div className="flex flex-col w-full md:w-[359px] mx-auto px-[20px] md:px-[unset]">
           <LogoAndTitle title="register"/>
           {/* Signup form */}
           <RegistrationForm1 />

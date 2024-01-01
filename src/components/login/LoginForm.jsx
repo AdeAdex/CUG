@@ -57,11 +57,11 @@ const LoginForm = () => {
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="rounded-[7.899px] p-[17.751px] w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
+            className="rounded-[7.899px] p-[17.751px] w-full mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
           />
 
           {formik.touched.email && formik.errors.email && (
-            <div className="text-red-500 mx-auto px-[17.751px] w-[358.968px] mt-[-20px]">
+            <div className="text-red-500 mx-auto px-[17.751px] w-full mt-[-20px]">
               {formik.errors.email}
             </div>
           )}
@@ -73,7 +73,7 @@ const LoginForm = () => {
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className="rounded-[7.899px] p-[17.751px] w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
+              className="rounded-[7.899px] p-[17.751px] w-full mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
             />
             <img
               src={showPassword ? eye : eyeOff}
@@ -84,7 +84,7 @@ const LoginForm = () => {
           </div>
 
           {formik.touched.password && formik.errors.password && (
-            <div className="text-red-500 mx-auto px-[17.751px] w-[358.968px] mt-[-20px]">
+            <div className="text-red-500 mx-auto px-[17.751px] w-full mt-[-20px]">
               {formik.errors.password}
             </div>
           )}

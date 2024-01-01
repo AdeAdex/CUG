@@ -59,7 +59,7 @@ const ChangePasswordForm = () => {
             value={formik.values.newPassword}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="rounded-[7.899px] p-[17.751px] w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
+            className="rounded-[7.899px] p-[17.751px] w-full md:w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
           />
           <img
             src={showPassword ? eye : eyeOff}
@@ -69,7 +69,7 @@ const ChangePasswordForm = () => {
           />
         </div>
         {formik.touched.newPassword && formik.errors.newPassword && (
-          <div className="text-red-500 mx-auto px-[17.751px] w-[358.968px] mt-[-20px]">
+          <div className="text-red-500 mx-auto px-[17.751px] w-full md:w-[358.968px] mt-[-20px]">
             {formik.errors.newPassword}
           </div>
         )}
@@ -81,7 +81,7 @@ const ChangePasswordForm = () => {
             value={formik.values.confirmPassword}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="rounded-[7.899px] p-[17.751px] w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
+            className="rounded-[7.899px] p-[17.751px] w-full md:w-[358.968px] mx-auto placeholder-[#BEBEBE] border border-1 border-[#BEBEBE]"
           />
           <img
             src={showPassword2 ? eye : eyeOff}
@@ -91,7 +91,7 @@ const ChangePasswordForm = () => {
           />
         </div>
         {formik.touched.confirmPassword && formik.errors.confirmPassword && (
-          <div className="text-red-500 mx-auto px-[17.751px] w-[358.968px] mt-[-20px]">
+          <div className="text-red-500 mx-auto px-[17.751px] w-full md:w-[358.968px] mt-[-20px]">
             {formik.errors.confirmPassword}
           </div>
         )}

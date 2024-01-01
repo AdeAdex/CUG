@@ -19,7 +19,7 @@ const WelcomePage = () => {
       }}
     >
       {/* Content container */}
-      <div className="px-[10px] mt-auto gap-y-[100px] flex flex-col bg-[#FBFAFB] md:bg-transparent">
+      <div className="px-[32px] xxsm:px-[20px] mt-auto gap-y-[100px] flex flex-col bg-[#FBFAFB] md:bg-transparent">
         <div className="w-[100%] flex flex-col gap-[26px]  md:mt-[unset]">
           {/* Logo section */}
           <div className="w-[70px] h-[72px] flex flex-col items-center mx-auto font-inter font-[700] text-[16px]">

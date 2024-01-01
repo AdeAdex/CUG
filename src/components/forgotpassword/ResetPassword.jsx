@@ -17,8 +17,8 @@ const ResetPassword = () => {
   };
   return (
     <>
-      <div className="pt-[105px] lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col">
-        <div className="flex flex-col max-w-[359px] mx-auto gap-y-[23.67px]">
+      <div className="pt-[105px] lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col w-full">
+        <div className="flex flex-col w-full md:w-[359px] mx-auto gap-y-[23.67px] px-[20px] md:px-[unset]">
           {/* Logo and title section */}
           <LogoAndTitle title="Reset Password" />
 

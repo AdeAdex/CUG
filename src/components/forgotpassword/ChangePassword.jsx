@@ -7,9 +7,9 @@ const ChangePassword = () => {
   return (
     <>
       {/* Main container */}
-      <div className="lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col">
+      <div className="lg:px-[34.52px] gap-[23.67px] h-screen flex flex-col w-full">
         {/* Logo and title section */}
-        <div className="flex flex-col max-w-[359px] mx-auto mt-auto">
+        <div className="flex flex-col w-full md:w-[359px] mx-auto mt-auto px-[20px] md:px-[unset]">
           <LogoAndTitle title="Change Password" />
           <span className="mt-[16px] text-center text-gray-400 font-inter text-sm font-medium leading-6">
             Set a New Password

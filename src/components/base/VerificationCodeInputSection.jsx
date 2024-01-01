@@ -54,7 +54,7 @@ const VerificationCodeInputSection = ({codes, setCodes}) => {
             key={index}
             id={`codeInput${index}`}
             type="tel"
-            className="border border-1 border-[#0F515F] py-[16px] px-[16px] w-[25%] rounded-[8px] text-[22px] font-[700] font-inter text-[#898989] text-center"
+            className="border border-1 border-[#0F515F] py-[10px] md:py-[16px] md:px-[16px] w-[25%] rounded-[8px] text-[22px] font-[700] font-inter text-[#898989] text-center"
             maxLength={1}
             value={code}
             onChange={(e) => handleInputChange(index, e.target.value)}
