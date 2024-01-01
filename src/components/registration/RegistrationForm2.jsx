@@ -19,7 +19,7 @@ const RegistrationForm2 = () => {
         userData
       );
 
-      console.log("Signup successful:", response.data);
+      console.log("Signup successful:", response);
     } catch (error) {
       console.error("Signup error:", error.message);
     }
@@ -31,7 +31,7 @@ const RegistrationForm2 = () => {
       phoneNumber: "",
       password: "",
       confirmPassword: "",
-      ...formData,
+      // ...formData,
     },
     validationSchema: Yup.object({
       phoneNumber: Yup.string().required("Phone Number is required"),
